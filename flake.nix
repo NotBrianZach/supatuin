@@ -16,10 +16,10 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.outputs.legacyPackages.${system};
     in {
-      packages.atuin = pkgs.callPackage ./atuin.nix {
+      packages.supatuin = pkgs.callPackage ./supatuin.nix {
         inherit (pkgs.darwin.apple_sdk.frameworks) Security SystemConfiguration;
       };
-      packages.default = self.outputs.packages.${system}.atuin;
+      packages.default = self.outputs.packages.${system}.supatuin;
 
       devShells.default = self.packages.${system}.default.overrideAttrs (super: {
         nativeBuildInputs = with pkgs;
