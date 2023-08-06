@@ -14,7 +14,7 @@
   SystemConfiguration,
 }:
 rustPlatform.buildRustPackage {
-  name = "atuin";
+  name = "supatuin";
 
   src = lib.cleanSource ./.;
 

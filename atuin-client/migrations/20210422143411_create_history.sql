@@ -8,7 +8,6 @@ create table if not exists history (
 	cwd text not null,
 	session text not null,
 	hostname text not null,
-
 	unique(timestamp, cwd, command)
 );
 
